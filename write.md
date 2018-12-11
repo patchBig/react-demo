@@ -10,11 +10,29 @@ devDependencies 下记录的是项目在开发过程中使用的插件，例如�
 
 ----
 
+## actions, reducers, store
+
+In the previous sections,we defined the actions that represent the facts about "what happened" and the reducers that update the state according to those actions.
+
+The Store is the object that brings them together.The store has the following responsibilities:
+
+- Holds application state;
+- Allows access to state via getState()
+- Allows state to be updated via dispatch(action);
+- Registers listeners via subscribe(listener);
+- Handles unregistered of listeners via the function returned by subscribe(listener).
+
+### dispatch(action)
+
+The Store's reducing function Will be called with the current getState() result and the given action synchronously. It's return value will be considered the next state. It will be returned from getState() from now on, and the change listeners will immediately be notified.
+
+----
+
 ## prop-types
 
 ### Usage
 
-PropTypes was originaly exposed as part of the React core module, and is commonly used with React components. Here is an example of using PropTypes with a React component, which also documents the different valiators propvided:
+PropTypes was originally exposed as part of the React core module, and is commonly used with React components. Here is an example of using PropTypes with a React component, which also documents the different validators provided:
 
 ```javascript
 Todo.propTypes = {
