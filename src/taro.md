@@ -208,3 +208,6 @@ JSX 代码
 既然组件库以及端能力都是依靠不同的端做不同实现来抹平差异，那么同样的，如果想为 Taro 引入更多的功能支持的话，有时候也需要按照这个套路来。例如，为了提升开发便利性，为 Taro 加入了 Redux 支持，做法就是，在小程序端，实现了 @tarojs/redux 这个库来作为小程序的 Redux 辅助库，并且以他作为基准库，它具有和 react-redux 一致的 API，在书写代码的时候，引用的都是 @tarojs/redux ，经过编译后，在 H5 端会替换成 nerv-redux（Nerv的 Redux 辅助库），在 RN 端会替换成 react-redux。这样就实现了 Redux 在 Taro 中的多端支持。
 
 ![多端支持](https://upload-images.jianshu.io/upload_images/7101063-d83abb64461968c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### [taro 目前概况](https://juejin.im/post/5c185d98f265da613c09b975)
+### [taro init 的背后](https://juejin.im/post/5c21f4e5f265da61117a54a0)
